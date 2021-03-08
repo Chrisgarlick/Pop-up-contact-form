@@ -1,58 +1,71 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Montserrat', sans-serif;
-    background-color: #E99269;
+* { 
+    box-sizing: border-box; 
+}
+body { 
+    margin: 0; 
+    padding: 0; 
+    background: #333;
+    font-family: Raleway; 
+    text-transform: uppercase; 
+    font-size: 11px; 
+}
+h1{
+    margin: 0; 
+}
+#contact { 
+    margin: 4em auto;
+    width: 100px; 
+    height: 30px; 
+    line-height: 30px;
+    background: teal;
+    color: white;
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid white;
 }
 
-.box{
-    margin: 40px 0;
+#contact:hover { 
+    background: #666; 
 }
 
-form {
-    transform: translateX(50%);
-    width: 40%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 50px 5px;
-    border: 1px solid grey;
-    border-radius: 7%;
-    box-shadow: 10px 10px 5px 5px #1D3557;
-    background-color: #F1FAEE;
+#contact:active { 
+    background: #444; 
 }
 
-.name, .email, #message {
-    width: 90%;
-    padding: 10px 0;
-    margin: 20px 0;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 14px;
-    font-weight: 400;
+#contactForm { 
+    display: none;
+    border: 6px solid #6E33D1; 
+    padding: 2em;
+    width: 400px;
+    text-align: center;
+    background: #fff;
+    position: fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);        
+}
+
+input, textarea { 
+    margin: .8em auto;
+    font-family: inherit; 
+    text-transform: inherit; 
+    font-size: inherit;
+    display: block; 
+    width: 280px; 
+    padding: .4em;
+}
+textarea { 
+    height: 80px; resize: none; 
+}
+
+.formBtn { 
+    width: 140px;
+    display: inline-block;
+    background: teal;
+    color: #fff;
+    font-weight: 100;
+    font-size: 1.2em;
     border: none;
-    background-color: #F1FAEE;
-    border-bottom: 1px solid #C81927;
-    color: #C81927;
-    outline: none;
-}
-
-#message {
-    resize: none;
-}
-
-button {
-    margin-top: 20px;
-    padding: 10px 180px;
-    font-size: 14px;
-    font-family: 'Montserrat', sans-serif;
-    background-color: #457B9D;
-    color: #F1FAEE;
-    transition: 0.3s;
-    border: none;
-}
-button:hover {
-    background-color: #1D3557;
+    height: 30px;
 }

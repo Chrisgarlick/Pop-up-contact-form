@@ -21,7 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = ''
+SECRET_KEY = '=)8l4wwj#dw8cfe14+rpyxk5+k5y6zq3*@y-m6-#2!s@r(9@v&'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -124,3 +124,12 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static")
 ]
+
+
+# EMAIL SETTINGS
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST:  'localhost'
+EMAIL_PORT: 1025
+EMAIL_HOST_USER: ''
+EMAIL_HOST_PASSWORD: ''
+EMAIL_USE_TLS: False

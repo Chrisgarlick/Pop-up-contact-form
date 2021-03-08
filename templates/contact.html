@@ -1,15 +1,17 @@
 {% extends 'base.html' %}
 {% load static %}
-
 {% block content %}
-    <div class="box">
-        <form action="{% url 'contact' %}" method="POST">
-            {% csrf_token %}
-            <input class="name" name="message-name" type="text" placeholder="Enter your Name">
-            <input class="email" name="message-email" type="email" placeholder="Enter your Email">
-            <textarea name="message" id="message" cols="30" rows="10" placeholder="Enter a Message"></textarea>
-            <button type="submit">Submit!</button>
-
+    <div id="contact">Contact</div>
+    <div id="contactForm">
+        <h1>Keep in touch!</h1>
+        <small>I'll get back to you as quickly as possible</small>
+        <form action="#">
+            <input placeholder="Name" type="text" required />
+            <input placeholder="Email" type="email" required />
+            <input placeholder="Subject" type="text" required />
+            <textarea placeholder="Comment"></textarea>
+            <input class="formBtn" type="submit" />
+            <input class="formBtn" type="reset" />
         </form>
     </div>
 {% endblock %}
