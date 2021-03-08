@@ -9,7 +9,8 @@ def ContactView(request):
         message_name = request.POST['message-name']
         message_email = request.POST['message-email']
         message = request.POST['message']
-        msg_mail = str(message) + " " + str(message_email)
+        message_comment = request.POST['message-comment']
+        msg_mail = str(message) + "\n " + str(message_comment) + "\nFrom " + str(message_email)
 
         send_mail(
             "Contacted by " + message_name,
@@ -20,6 +21,7 @@ def ContactView(request):
             )
         return render(request, 'contact.html', {'message_name':message_name,
                                                 'message_email': message_email,
-                                                'message': message})
+                                                'message': message,
+                                                'message_comment': message-comment})
     else:
         return render(request, 'contact.html', {})
